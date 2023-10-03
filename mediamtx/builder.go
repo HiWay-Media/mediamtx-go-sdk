@@ -23,7 +23,7 @@ func BuildMediaMtx(url string, debug bool) (IMediamtxClient, error){
 }
 
 
-func (o *haivisionSdk) debugPrint(data interface{}) {
+func (o *mediamtxSdk) debugPrint(data interface{}) {
 	if o.debug {
 		log.Println(data)
 	}
