@@ -31,3 +31,29 @@ itemsPerPage	integer
 Default: 100
 items per page.
 */
+
+
+/*
+POST http://localhost:9997/v2/rtspsessions/kick/{id}
+kicks out a RTSP session from the server.
+*/
+
+
+/*
+GET http://localhost:9997/v2/rtspsconns/list
+returns all RTSPS connections.
+*/
+
+
+
+/*
+GET http://localhost:9997/v2/rtspsconns/get/{id}
+returns a RTSPS connection.
+*/
+
+
+
+/*
+POST http://localhost:9997/v2/rtspssessions/kick/{id}
+kicks out a RTSPS session from the server.
+*/
