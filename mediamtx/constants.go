@@ -13,6 +13,7 @@ const (
 	// HLS
 	GET_HLS						= "/v2/hlsmuxers/list"
 	GET_HLS_MUXER				= "/v2/hlsmuxers/get/"
+	// PATH
 	GET_PATHS					= "/v2/paths/list"
 	GET_PATH 					= "/v2/paths/get/"
 	// RTSP
