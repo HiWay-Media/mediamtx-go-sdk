@@ -1,5 +1,9 @@
 package mediamtx
 
+import (
+	"encoding/json"
+)
+
 /*
 GET http://localhost:9997/v2/config/get
 returns the configuration.
