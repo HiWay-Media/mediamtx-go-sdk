@@ -9,12 +9,14 @@ import (
 type mediamtxSdk struct {
 	Url        string
 	restClient *resty.Client
+	debug 		bool
 }
 
 
 type IMediamtxClient interface {
 	//
 	HealthCheck() error
+	GetConfig() (*Config, error)
 	//
 }
 

@@ -1,7 +1,9 @@
 package mediamtx
 
 const (
+	//
 	// documentation https://bluenviron.github.io/mediamtx/
+	//
 	// Configs
 	GET_CONFIG 					= "/v2/config/get"
 	SET_CONFIG 					= "/v2/config/set" // post
