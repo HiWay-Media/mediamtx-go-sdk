@@ -19,10 +19,5 @@ func BuildMediaMtx(url string, debug bool) (IMediamtxClient, error){
 		log.Println("Debug mode is enabled for the haivision client ")
 	}
 	//
-	// Set Cookie for all request
-	mediamtxClient.restClient.SetCookie(&http.Cookie{
-		Name:  "sessionID",
-		Value: respSessionId.Response.SessionID,
-	})
-	//
+	return mediamtxClient, nil
 }
