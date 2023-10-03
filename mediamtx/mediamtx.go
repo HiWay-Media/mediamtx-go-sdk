@@ -17,6 +17,9 @@ type IMediamtxClient interface {
 	//
 	HealthCheck() error
 	GetConfig() (*Config, error)
+	SetConfig(name string) error
+	AddPathConfig(name string) error
+	EditPathConfig(name string) error
 	//
 }
 
