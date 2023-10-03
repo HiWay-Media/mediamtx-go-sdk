@@ -93,6 +93,38 @@ package mediamtx
 */
 
 type Config struct {
-	LogLevel string `json:"logLevel"`
-	
-} 
+	LogLevel                  string   `json:"logLevel"`
+	LogDestinations           []string `json:"logDestinations"`
+	LogFile                   string   `json:"logFile"`
+	ReadTimeout               string   `json:"readTimeout"`
+	WriteTimeout              string   `json:"writeTimeout"`
+	WriteQueueSize            int      `json:"writeQueueSize"`
+	UdpMaxPayloadSize         int      `json:"udpMaxPayloadSize"`
+	ExternalAuthenticationURL string   `json:"externalAuthenticationURL"`
+	Api                       bool     `json:"api"`
+	ApiAddress                string   `json:"apiAddress"`
+	Metrics                   bool     `json:"metrics"`
+	MetricsAddress            string   `json:"metricsAddress"`
+	Pprof                     bool     `json:"pprof"`
+	PprofAddress              string   `json:"pprofAddress"`
+	RunOnConnect              string   `json:"runOnConnect"`
+	RunOnConnectRestart       bool     `json:"runOnConnectRestart"`
+	RunOnDisconnect           string   `json:"runOnDisconnect"`
+	Rtsp                      bool     `json:"rtsp"`
+	Protocols                 []string `json:"protocols"`
+	Encryption                string   `json:"encryption"`
+	RtspAddress               string   `json:"rtspAddress"`
+	RtspsAddress              string   `json:"rtspsAddress"`
+	RtpAddress                string   `json:"rtpAddress"`
+	RtcpAddress               string   `json:"rtcpAddress"`
+	MulticastIPRange          string   `json:"multicastIPRange"`
+	MulticastRTPPort          int      `json:"multicastRTPPort"`
+	MulticastRTCPPort         int      `json:"multicastRTCPPort"`
+	ServerKey                 string   `json:"serverKey"`
+	ServerCert                string   `json:"serverCert"`
+	AuthMethods               []string `json:"authMethods"`
+	Rtmp                      bool     `json:"rtmp"`
+	RtmpAddress               string   `json:"rtmpAddress"`
+	RtmpEncryption            string   `json:"rtmpEncryption"`
+	RtmpsAddress              string   `json:"rtmpsAddress"`
+}
