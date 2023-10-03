@@ -34,7 +34,7 @@ func (o *mediamtxSdk) SetConfig(name string) error {
 	o.debugPrint("SetConfig "+ name)
 	resp, err := o.restyPost(SET_CONFIG+name, nil)
 	if err != nil {
-		return nil, err
+		return err
 	}
 	//
 	o.debugPrint(resp)
@@ -53,7 +53,7 @@ func (o *mediamtxSdk) AddPathConfig(name string) error {
 	o.debugPrint("AddPathConfig "+ name)
 	resp, err := o.restyPost(ADD_PATH_CONFIG+name, nil)
 	if err != nil {
-		return nil, err
+		return err
 	}
 	// it miss the request
 	//
@@ -72,7 +72,7 @@ func (o *mediamtxSdk) EditPathConfig(name string) error {
 	o.debugPrint("EditPathConfig "+ name)
 	resp, err := o.restyPost(EDIT_PATH_CONFIG+name, nil)
 	if err != nil {
-		return nil, err
+		return err
 	}
 	// it miss the request
 	//
