@@ -1,12 +1,11 @@
 package mediamtx
 
-
 /*
 GET http://localhost:9997/v2/config/get
 returns the configuration.
 */
 
-func (o *mediamtxSdk) GetConfig() (*Config, error)  {
+func(o *mediamtxSdk) GetConfig() (*Config, error)  {
 
 
 	return nil, nil
