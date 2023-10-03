@@ -24,7 +24,8 @@ func (o *mediamtxSdk) GetHlsMuxers( requestQuery ListRequest ) error {
 		// values not valid, deal with errors here | return nil, errs
 		return errs
 	}
-	resp, err := o.restyGet(GET_HLS, requestQuery)
+	// need to transform the struct
+	resp, err := o.restyGet(GET_HLS, nil)
 	if err != nil {
 		return err
 	}

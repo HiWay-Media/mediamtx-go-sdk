@@ -24,7 +24,8 @@ func (o *mediamtxSdk) GetPathList(requestQuery ListRequest) error {
 		// values not valid, deal with errors here
 		return errs
 	}
-	resp, err := o.restyGet(GET_PATHS, requestQuery)
+	// need to transform the struct
+	resp, err := o.restyGet(GET_PATHS, nil)
 	if err != nil {
 		return err
 	}
