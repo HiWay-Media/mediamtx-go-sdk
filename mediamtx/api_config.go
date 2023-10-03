@@ -6,9 +6,18 @@ returns the configuration.
 */
 
 func(o *mediamtxSdk) GetConfig() (*Config, error)  {
-
-
-	return nil, nil
+	log.Println("GetConfig ")
+	resp, err := o.restyGet(GET_CONFIG, nil)
+	if err != nil {
+		return nil, err
+	}
+	//
+	o.debugPrint(resp)
+	var obj Config
+	if err := json.Unmarshal(resp.Body(), &obj); err != nil {
+		return nil, err
+	}
+	return &obj, nil
 }
 
 /*
