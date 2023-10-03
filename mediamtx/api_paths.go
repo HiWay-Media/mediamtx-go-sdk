@@ -1,5 +1,10 @@
 package mediamtx
 
+import (
+
+	"gopkg.in/validator.v2"
+)
+
 /*
 GET http://localhost:9997/v2/paths/list
 returns all paths.
@@ -15,7 +20,11 @@ items per page.
 
 func (o *mediamtxSdk) GetPathList(requestQuery ListRequest) error {
 	o.debugPrint("GetPathList ")
-	resp, err := o.restyGet(GET_PATHS, nil)
+	if errs := validator.Validate(requestQuery); errs != nil {
+		// values not valid, deal with errors here
+		return errs
+	}
+	resp, err := o.restyGet(GET_PATHS, requestQuery)
 	if err != nil {
 		return err
 	}

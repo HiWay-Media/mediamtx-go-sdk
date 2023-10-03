@@ -20,8 +20,8 @@ type IMediamtxClient interface {
 	SetConfig(name string) error
 	AddPathConfig(name string) error
 	EditPathConfig(name string) error
-
-	GetPathList(requestQuery ListRequest) error
+	GetHlsMuxers( requestQuery ListRequest ) error
+	GetPathList( requestQuery ListRequest ) error
 	//
 }
 
