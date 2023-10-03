@@ -19,7 +19,7 @@ items per page.
 */
 
 func (o *mediamtxSdk) GetHlsMuxers( requestQuery ListRequest ) error {
-	o.debugPrint("GetPathList "+ requestQuery)
+	o.debugPrint("GetPathList ")
 	if errs := validator.Validate(requestQuery); errs != nil {
 		// values not valid, deal with errors here | return nil, errs
 		return errs
