@@ -177,3 +177,8 @@ type Path struct {
 		Id   string `json:"id"`
 	} `json:"readers"`
 }
+
+type PathListResponse struct {
+	PageCount int    `json:"pageCount"`
+	Items     []Path `json:"items"`
+}
