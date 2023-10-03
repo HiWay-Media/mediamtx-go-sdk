@@ -1,4 +1,4 @@
-package mediamtxSdk
+package mediamtx
 
 /*
 GET http://localhost:9997/v2/rtmpconns/list
