@@ -57,7 +57,7 @@ Default: 100
 items per page.
 */
 
-func (o *mediamtxSdk) GetRtspSessions( requestQuery LastRequest ) error{
+func (o *mediamtxSdk) GetRtspSessions( requestQuery ListRequest ) error{
 	o.debugPrint("GetRtspSessions ")
 	// need to transform the struct
 	resp, err := o.restyGet(GET_RTSP_SESSIONS, nil)
