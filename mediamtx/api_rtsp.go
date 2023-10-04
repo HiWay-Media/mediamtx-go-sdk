@@ -30,7 +30,7 @@ GET http://localhost:9997/v2/rtspconns/get/{id}
 returns a RTSP connection.
 */
 
-func (o *mediamtxSdk) GetRtspConnections( name string ) error {
+func (o *mediamtxSdk) GetRtspConnection( name string ) error {
 	o.debugPrint("GetRtspConnections ")
 	// need to transform the struct
 	resp, err := o.restyGet(GET_RTSP+name, nil)
