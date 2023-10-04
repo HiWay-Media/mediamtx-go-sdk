@@ -29,8 +29,12 @@ type IMediamtxClient interface {
 	GetRtspConnection( name string ) error
 	GetRtspSessions( requestQuery ListRequest ) error
 	GetRtspSession( name string ) error
+	KickRtspSession( name string ) error
+	KickRtspConnection( name string ) error
 	GetRtmpConnections( requestQuery ListRequest ) error
 	GetRtmpConnection( name string ) error
+	KickRtmpConnection( name string ) error
+	GetSrtConnections( requestQuery ListRequest ) error
 	//
 }
 

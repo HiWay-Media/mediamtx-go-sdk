@@ -46,3 +46,16 @@ func (o *mediamtxSdk) GetRtmpConnection( name string ) error{
 POST http://localhost:9997/v2/rtmpconns/kick/{id}
 kicks out a RTMP connection from the server.
 */
+
+func (o *mediamtxSdk) KickRtmpConnection( name string ) error {
+	o.debugPrint("KickRtmpConnection ")
+	// need to transform the struct
+	resp, err := o.restyGet(KICK_RTMP_CONNECTION+name, nil)
+	if err != nil {
+		return err
+	}
+	//
+	o.debugPrint(resp)
+	return nil
+
+}

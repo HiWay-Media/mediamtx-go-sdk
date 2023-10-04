@@ -93,6 +93,20 @@ kicks out a RTSP session from the server.
 */
 
 
+
+func (o *mediamtxSdk) KickRtspSession( name string ) error {
+	o.debugPrint("KickRtspSession ")
+	// need to transform the struct
+	resp, err := o.restyGet(KICK_RTSP_SESSION+name, nil)
+	if err != nil {
+		return err
+	}
+	//
+	o.debugPrint(resp)
+	return nil
+
+}
+
 /*
 GET http://localhost:9997/v2/rtspsconns/list
 returns all RTSPS connections.
@@ -111,3 +125,16 @@ returns a RTSPS connection.
 POST http://localhost:9997/v2/rtspssessions/kick/{id}
 kicks out a RTSPS session from the server.
 */
+
+func (o *mediamtxSdk) KickRtspConnection( name string ) error {
+	o.debugPrint("KickRtspConnection ")
+	// need to transform the struct
+	resp, err := o.restyGet(KICK_RTSP_SESSION+name, nil)
+	if err != nil {
+		return err
+	}
+	//
+	o.debugPrint(resp)
+	return nil
+
+}
