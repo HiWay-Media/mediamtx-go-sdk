@@ -39,3 +39,15 @@ func (o *mediamtxSdk) GetPathList(requestQuery ListRequest) error {
 GET http://localhost:9997/v2/paths/get/{name}
 returns a path.
 */
+
+func (o *mediamtxSdk) GetPath(name string) error {
+	o.debugPrint("GetPath ")
+	// need to transform the struct
+	resp, err := o.restyGet(GET_PATH+name, nil)
+	if err != nil {
+		return err
+	}
+	//
+	o.debugPrint(resp)
+	return nil
+}

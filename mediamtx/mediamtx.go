@@ -24,6 +24,9 @@ type IMediamtxClient interface {
 	GetHlsMuxers( requestQuery ListRequest ) error
 	GetHlsMuxer( name string ) error
 	GetPathList( requestQuery ListRequest ) error
+	GetPath( name string ) error
+	GetRtspConnections( requestQuery ListRequest ) error
+	GetRtspConnection( name string ) error
 	//
 }
 
