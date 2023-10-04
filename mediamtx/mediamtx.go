@@ -27,6 +27,8 @@ type IMediamtxClient interface {
 	GetPath( name string ) error
 	GetRtspConnections( requestQuery ListRequest ) error
 	GetRtspConnection( name string ) error
+	GetRtspSessions( requestQuery LastRequest ) error
+	GetRtspSession( name string ) error
 	//
 }
 

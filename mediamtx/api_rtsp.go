@@ -57,6 +57,35 @@ Default: 100
 items per page.
 */
 
+func (o *mediamtxSdk) GetRtspSessions( requestQuery LastRequest ) error{
+	o.debugPrint("GetRtspSessions ")
+	// need to transform the struct
+	resp, err := o.restyGet(GET_RTSP_SESSIONS, nil)
+	if err != nil {
+		return err
+	}
+	//
+	o.debugPrint(resp)
+	return nil
+}
+
+/*
+GET http://localhost:9997/v2/rtspsessions/get/{id}
+
+*/
+
+func (o *mediamtxSdk) GetRtspSession( name string ) error{
+	o.debugPrint("GetRtspSession ")
+	// need to transform the struct
+	resp, err := o.restyGet(GET_RTSP_SESSION+name, nil)
+	if err != nil {
+		return err
+	}
+	//
+	o.debugPrint(resp)
+	return nil
+}
+
 
 /*
 POST http://localhost:9997/v2/rtspsessions/kick/{id}
