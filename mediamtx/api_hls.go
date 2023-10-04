@@ -19,7 +19,7 @@ items per page.
 */
 
 func (o *mediamtxSdk) GetHlsMuxers( requestQuery ListRequest ) error {
-	o.debugPrint("GetPathList ")
+	o.debugPrint("GetHlsMuxers ")
 	if errs := validator.Validate(requestQuery); errs != nil {
 		// values not valid, deal with errors here | return nil, errs
 		return errs
@@ -39,3 +39,14 @@ func (o *mediamtxSdk) GetHlsMuxers( requestQuery ListRequest ) error {
 GET http://localhost:9997/v2/hlsmuxers/get/{name}
 returns a HLS muxer.
 */
+func (o *mediamtxSdk) GetHlsMuxer( name string ) error {
+	o.debugPrint("GetHlsMuxer ")
+	// need to transform the struct
+	resp, err := o.restyGet(GET_HLS+name, nil)
+	if err != nil {
+		return err
+	}
+	//
+	o.debugPrint(resp)
+	return nil
+}

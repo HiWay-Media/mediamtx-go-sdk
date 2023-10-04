@@ -87,3 +87,15 @@ POST http://localhost:9997/v2/config/paths/remove/{name}
 removes the configuration of a path.
 */
 
+
+func (o *mediamtxSdk) RemovePathConfig(name string) error{
+	o.debugPrint("EditPathConfig "+ name)
+	resp, err := o.restyPost(EDIT_PATH_CONFIG+name, nil)
+	if err != nil {
+		return err
+	}
+	// it miss the request
+	//
+	o.debugPrint(resp)
+	return nil
+}
