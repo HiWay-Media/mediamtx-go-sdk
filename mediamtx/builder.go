@@ -18,6 +18,10 @@ func BuildMediaMtx(url string, debug bool) (IMediamtxClient, error){
 		mediamtxClient.debug = true
 		log.Println("Debug mode is enabled for the haivision client ")
 	}
+	// You can override all below settings and options at request level if you want to
+	//--------------------------------------------------------------------------------
+	// Host URL for all request. So you can use relative URL in the request
+	mediamtxClient.restClient.SetBaseURL(url)
 	//
 	return mediamtxClient, nil
 }
