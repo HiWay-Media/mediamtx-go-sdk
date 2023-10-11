@@ -20,6 +20,14 @@ You can install the MediaMTX Go SDK using Go modules:
 go get github.com/HiWay-Media/mediamtx-go-sdk
 ```
 
+## Getting Started
+
+
+## Usage
+The SDK provides various features for working with MediaMTX services. Here's a quick overview:
+
+
+
 ## Contributing
 We welcome contributions from the open-source community. To contribute to this project, please follow our Contribution Guidelines.
 
