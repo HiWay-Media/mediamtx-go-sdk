@@ -1,5 +1,6 @@
 # MediaMTX Go SDK
 
+[![Go build](https://github.com/HiWay-Media/mediamtx-go-sdk/actions/workflows/go-build.yml/badge.svg)](https://github.com/HiWay-Media/mediamtx-go-sdk/actions/workflows/go-build.yml)
 ![GitHub](https://img.shields.io/github/license/HiWay-Media/mediamtx-go-sdk)
 ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/HiWay-Media/mediamtx-go-sdk)
 
